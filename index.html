@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project #1: Star Wars Web App AJAX API</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <h1><img src="./img/swlogo.png" alt=""></h1>
+    <p>by: Daniel Avzaradel</p>
+
+    <div class="not-found">
+        <h3>Oh, no! That person is not available ...</h3>
+    </div>
+
+    <div class="container">
+        
+        <div class="load-wrapper hidden">
+            <i class="fas fa-spinner fa-pulse fa-3x"></i><br>
+            <h3>LOADING ...</h3>
+        </div>
+
+        <h2>Full Name: <span id="name"></span></h2>
+        <h3>Height: <span id="height"></span></h3>
+        <h3>Gender: <span id="gender"></span></h3>
+        <h3>Birth Year: <span id="birthYear"></span></h3>
+        <h3>Home World: <span id="homeWorld"></span></h3>
+    </div>
+    <button id="find">Find Someone</button>
+
+    
+
+    <script src="https://kit.fontawesome.com/2098968af1.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
