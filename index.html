@@ -11,22 +11,23 @@
     <h1><img src="./img/swlogo.png" alt=""></h1>
     <p>by: Daniel Avzaradel</p>
 
-    <div class="not-found">
-        <h3>Oh, no! That person is not available ...</h3>
-    </div>
-
     <div class="container">
+
+        <div class="not-found hidden">
+            <p>Oh, no! That person is not available ...</p>
+        </div>
         
         <div class="load-wrapper hidden">
             <i class="fas fa-spinner fa-pulse fa-3x"></i><br>
             <h3>LOADING ...</h3>
         </div>
-
+        <div id="data">
         <h2>Full Name: <span id="name"></span></h2>
         <h3>Height: <span id="height"></span></h3>
         <h3>Gender: <span id="gender"></span></h3>
         <h3>Birth Year: <span id="birthYear"></span></h3>
         <h3>Home World: <span id="homeWorld"></span></h3>
+        </div>
     </div>
     <button id="find">Find Someone</button>
 

@@ -8,6 +8,8 @@ const gender = document.getElementById('gender')
 const birthYear = document.getElementById('birthYear')
 const homeWorld = document.getElementById('homeWorld')
 
+const dataBox = document.getElementById('data')
+
 let id = 0;
 
 const findSomeone = async () => {
@@ -20,6 +22,7 @@ const findSomeone = async () => {
             loader.classList.add('hidden')
     }, 500))
     .then(data=> {
+        dataBox.style.display = "block";
         notFound.classList.add('hidden')
         console.log(data)
         fullName.textContent = data.name;
@@ -34,7 +37,7 @@ const findSomeone = async () => {
         })
         .catch(err => {
             setTimeout(() => {
-            
+                dataBox.style.display = "none";
                 notFound.classList.remove('hidden')
         }, 500)
         })
