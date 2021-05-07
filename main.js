@@ -12,15 +12,14 @@ const dataBox = document.getElementById('data')
 
 let id = 0;
 
-const findSomeone = async () => {
+const findSomeone = () => {
+
+
     id = Math.floor(Math.random() * 83);
+    loader.classList.remove('hidden')
 
     fetch(`https://swapi.dev/api/people/${id}/`)
-    .then(loader.classList.remove('hidden'))
     .then(response => response.json())
-    .then(setTimeout(() => {
-            loader.classList.add('hidden')
-    }, 500))
     .then(data=> {
         dataBox.style.display = "block";
         notFound.classList.add('hidden')
@@ -34,15 +33,20 @@ const findSomeone = async () => {
         .then(resp => resp.json())
         .then(planet => {
             homeWorld.textContent = planet.name
+            loader.classList.add('hidden')
         })
         .catch(err => {
             setTimeout(() => {
                 dataBox.style.display = "none";
+                loader.classList.add('hidden')
                 notFound.classList.remove('hidden')
+
         }, 500)
         })
     })
     .catch(e => console.log(e, "failed"))
+
+
 }
 
 find.addEventListener('click', findSomeone)
